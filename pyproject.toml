@@ -11,14 +11,14 @@ authors = [
 maintainers = [
   {name = "Jason Hall", email = "jdhall75@gmail.com"}
 ]
-readme = ["README.md"]
+readme =  "README.md"
 license = {file = "LICENSE"}
 keywords = ["network", "backups", "version control", "configuration backup"]
-dependencies = ['click','scrapli','celery']
+dependencies = ['click','scrapli','celery','ruamel.yaml']
 requires-python = ">= 3.10"
 
 [project.scripts]
-pyrancid = "pyrancid.cli:main()"
+pyrancid = "pyrancid.cli:main"
 
 [project.urls]
 Repository = "git@github.com:jdhall75/pyrancid.git"
