@@ -7,9 +7,14 @@ RANCID style network backups in python.... with a twist
 ## TODO
 Pydantic models for:
     - the config
-    - pyrancid types - profiles
+    - pyrancid device type
         - hostname
         - mgmt-ip
+        - connection type -  morespecific type overrides the profile connection type
+            - telnet - scrapli
+            - ssh - scrapli
+            - netconf - ncclient
+    - pyrancid types - profiles
         - connection type
             - telnet - scrapli
             - ssh - scrapli
