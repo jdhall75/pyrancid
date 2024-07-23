@@ -1,17 +1,22 @@
 ---
-types_location: tests/data/types.yaml
-
-logging:
-  handlers:
-    console:
-      class : logging.StreamHandler
-      formatter: brief
-      level   : INFO
-      filters: [allow_foo]
-      stream  : ext://sys.stdout
-    file:
-      class : logging.handlers.RotatingFileHandler
-      formatter: precise
-      filename: logconfig.log
-      maxBytes: 1024
-      backupCount: 3
+pyrancid_root: &pyrancid_root /home/jhall/projects/pyrancid/tests/config-repo
+nornir_config_name: nornir-config.yaml
+nornir_default_file: nornir-defaults.yaml
+nornir_groups_file: nornir-groups.yaml
+default_prompt_regex: 
+logging_config:
+  log_root: *pyrancid_root
+  logging:
+    handlers:
+      console:
+        class : logging.StreamHandler
+        formatter: brief
+        level   : INFO
+        filters: [allow_foo]
+        stream  : ext://sys.stdout
+      file:
+        class : logging.handlers.RotatingFileHandler
+        formatter: precise
+        filename: logconfig.log
+        maxBytes: 1024
+        backupCount: 3
